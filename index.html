@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+  <title>全民VIP视频在线解析</title>
+  <meta name="keywords" content="vip视频解析,vip视频在线解析,vip解析,万能vip视频解析,vip视频全能解析,vip视频,全民VIP视频在线解析,手机vip视频解析,手机在线解析vip视频,优酷vip解析,爱奇艺vip解析,腾讯vip解析,乐视vip解析,芒果vip解析">
+  <meta name="description" content="全民VIP视频免费看，在线解析vip视频，优酷vip解析，爱奇艺vip解析，腾讯vip解析，乐视vip解析，全网影视vip，方便广大用户观看VIP视频服务，最新电影最新电视剧在线免费观看">
+  <link href="css.css" rel="stylesheet" />
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> 
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script> 
+  <script type="text/javascript">
+	function dihejk() {
+		var diz = document.getElementById("url").value;
+		var jkurl = document.getElementById("jk");
+		var jk = document.getElementById("jk").selectedIndex;
+		var jkv = jkurl.options[jk].value;
+		var cljurl = document.getElementById("player");
+		cljurl.src = jkv + diz
+	}
+	function dihejk2() {
+		var diz = document.getElementById("url").value;
+		var jkurl = document.getElementById("jk");
+		var jk = document.getElementById("jk").selectedIndex;
+		var jkv = jkurl.options[jk].value;
+		var cljurl = document.getElementById("player");
+		window.open(jkv + diz, "_blank");
+	}
+	function dongtai(obj){
+		var diz = $(obj).attr("title");
+		var jkurl = document.getElementById("jk");
+		var jk = document.getElementById("jk").selectedIndex;
+		var jkv = jkurl.options[jk].value;
+		var cljurl = document.getElementById("player");
+		window.open(jkv + diz, "_blank");
+	}
+	function iqiyi() {
+		var url = 'http://127.0.0.1:8000/iqiyi/'
+		var soap = document.getElementById("soap").value;
+		var target = url + soap;
+		fetch(target,{method:'GET',mode:'cors',})
+			.then(function(response){
+				return response.json();
+				// var data = response.json();
+				// var table=document.getElementById("table");
+		  //   for(var i=0;i<data.length;i++){
+		  //       var row=table.insertRow(table.rows.length);
+		  //       var c1=row.insertCell(0);
+		  //       c1.innerHTML=data[i].id;
+		  //       var c2=row.insertCell(1);
+		  //       c2.innerHTML=data[i].src;
+		  //   }
+			})
+			.then(function(myJson){
+				// var data = response.json();
+				//var table=document.getElementById("table");
+				//var order = document.getElementById("orders");
+				var text = "";
+		    for(var i=0;i<myJson.length;i++){
+		        // var row=table.insertRow(table.rows.length);
+		        // var c1=row.insertCell(0);
+		        // c1.innerHTML=myJson[i].id;
+		        // var c2=row.insertCell(1);
+		        // c2.innerHTML=myJson[i].src;
+		        text +=  "<a class='btn2 btn-outline2' title=" + myJson[i].src + "  onclick='dongtai(this)'>"+ myJson[i].id +"</a>";
+		    }
+		    document.getElementById("orders").innerHTML = text
+			})
+		}
+  </script>
+</head> 
+<body>
+	<div class="col-xs-12 col-sm-10 col-md-8 col-lg-7 center-block" style="float: none; background">
+		<h3 class="text-muted" align="center">
+			全民VIP视频在线解析
+		</h3>
+		<hr>
+		<section style="padding: 5px 10px; border-width: 0px 0px 0px; border-style: solid none none; border-bottom-left-radius: 2%; border-bottom-right-radius: 2%;"class="135brush">
+			<p style="letter-spacing: 1px; text-align: center;">
+				<span style="color: #7F7F7F;">
+					最稳定，更新最快的视频解析网站，实时纠错，实时解析！
+				</span>
+			</p>
+			<p style="letter-spacing: 1px; text-align: center;">
+				<span style="color: #7F7F7F;">
+					免费全网影视，VIP会员视频免广告看电影！若播放异常，更换接口尝试哦！
+				</span>
+			</p>
+			<div class="language">	  
+				<a class="btn2 btn-outline2" href="http://v.ff98sha.me" rel="nofollow" target="_blank">VIP解析</a>
+				<a class="btn2 btn-outline2" href="http://v.ff98sha.me" rel="nofollow" target="_blank">VIP解析</a>
+			</div>
+		</section>
+		<div class="col-md-14 column">
+			<div class="panel panel-default">
+				<div id="kj" class="panel-body">
+					<iframe src="./ks.html" id="player" width="100%" height="600px" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no">
+					</iframe>
+				</div>
+			</div>
+			<script>
+				if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+					document.getElementById("sdfdf").style.display = "block";
+				}
+			</script>
+		</div>
+		<div class="col-md-14 column">
+			<form method="get" id="1233911832"></form>
+			<div class="input-group" style="width: 100%;">
+				<span class="input-group-addon input-lg" style="width: 80px; ">选择接口</span>
+			<select class="form-control input-lg" id="jk">
+				<option value="https://okjx.cc/?url=" selected="">1号线路</option>
+				<option value="https://api.mvm.link/?url=">2号线路</option>
+				<option value="https://z1.m1907.cn/?jx=">3号线路</option>
+			</select>
+			</div>
+			<br>
+			<div class="input-group" style="width: 100%; ">
+				<span class="input-group-addon input-lg" style="width: 80px;">播放地址</span>
+				<input class="form-control input-lg" type="search" placeholder="请在此处粘贴视频网址" id="url">
+			</div>
+			<br>
+			<div>
+				<button id="bf" type="button" class="btn btn-success btn-lg btn-block hidden-xs" onclick="dihejk()">Go-开始解析</button>
+				<button id="bf" type="button" class="btn btn-success btn-lg btn-block hidden-xs" onclick="dihejk2()">New-全屏解析</button>
+				<button id="bf" type="button" class="btn btn-success btn-lg btn-block visible-xs" onclick="dihejk()">开始解析</button>
+				<button id="bf" type="button" class="btn btn-success btn-lg btn-block visible-xs" onclick="dihejk2()">全屏解析</button>
+			</div>
+			<!--
+			<div style="clear:both">
+				<div class="container">
+					<div class="row clearfix">
+						<div class="col-md-9 column">
+							<div class="row" id="tkk">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			 end ad-->
+		<div class="col-md-14 column">
+			<form method="get" id="1233911832"></form>
+			<div class="input-group" style="width: 100%; ">
+				<span class="input-group-addon input-lg" style="width: 80px;">爱奇艺剧集名称</span>
+				<input class="form-control input-lg" type="search" placeholder="请在此处粘贴视频网址" id="soap">
+			</div>
+			<div>
+				<button id="bf" type="button" class="btn btn-success btn-lg btn-block hidden-xs" onclick="iqiyi()">获取剧集</button>
+			</div>
+
+		</div>
+		<div class="unit-100">
+			<div class="language" id="orders">
+			<a class="btn2 btn-outline2" href="https://www.le.com/" rel="nofollow" target="_blank">进入乐视视频</a>
+			<a class="btn2 btn-outline2" href="https://www.iqiyi.com/" rel="nofollow" target="_blank">进入奇艺视频</a>
+			<a class="btn2 btn-outline2" href="https://www.mgtv.com/" rel="nofollow" target="_blank">进入芒果视频</a>
+			<a class="btn2 btn-outline2" href="https://www.tudou.com/" rel="nofollow" target="_blank">进入土豆视频</a>
+			<br>
+			<a class="btn2 btn-outline2" href="https://v.qq.com/" rel="nofollow" target="_blank">进入腾讯视频</a>
+			<a class="btn2 btn-outline2" href="https://www.youku.com/" rel="nofollow" target="_blank">进入优酷视频</a>
+			<a class="btn2 btn-outline2" href="https://tv.sohu.com/" rel="nofollow" target="_blank">进入搜狐视频</a>
+			<a class="btn2 btn-outline2" href="https://www.pptv.com/" rel="nofollow" target="_blank">进入pptv视频</a>
+			</div>
+			<br>
+		</div>
+		<div class="col-md-14 column">
+				<table id="table">
+			<thead>
+			<tr>
+				<th>剧集</th>
+				<th>链接</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+		</table>
+	</div>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+				<th class="tit">全民VIP视频在线解析说明</th>
+				</tr>
+				</thead>
+			<tbody>
+				<tr>
+				<td>
+				<h3>
+					操作指南
+				</h3>
+				<ul style="list-style-type:none">
+					<li>第&nbsp;一&nbsp;步&nbsp;&nbsp;进入各大视频网站，找到想要观看的VIP会员视频，然后复制链接（浏览器上的视频地址）</li>
+					<li>第&nbsp;二&nbsp;步&nbsp;&nbsp;将复制的链接粘贴到本站播放地址框，并点击开始解析</li>
+					<li>第&nbsp;三&nbsp;步&nbsp;&nbsp;点击播放按钮，等待解析完成，即可免费观看VIP会员视频</li>
+				</ul>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<h3>
+					温馨提示
+				</h3>
+				<div class="unit-100">
+				<div class="language">
+					<p>本站视频源于互联网视频网站，仅供学习交流。已支持以上网站视频播放(包含VIP会员视频)</p>
+				</div>
+				</div>
+				</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			友情链接：
+		</p>
+		<p>
+			<a target="_blank" title="全民VIP视频在线解析" href="http://v.ff98sha.me">全民VIP视频在线解析</a>
+			&nbsp;&nbsp;
+		</p>
+		<div class="panel-body" style="text-align: center;">
+			<div class="container-fluid">
+				<p>
+					<a target="_blank" href="http://v.ff98sha.me" class="btn btn-default btn-sm">全民VIP视频在线解析</a>
+				</p>
+			</div>
+			<p>本站不进行任何资源存储，只提供影视检索服务。<br>&copy; ff98sha</p>
+		</div>
+
+	</div>
+</body>
+</html>
