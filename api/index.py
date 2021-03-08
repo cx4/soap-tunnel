@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests
 from lxml import etree
 import re
+import uvicorn
 app = FastAPI()
 
 origins = [
@@ -17,6 +18,7 @@ app.add_middleware(
 	allow_origins=origins,
 	allow_credentials=True,
 	allow_methods=['*'],
+	allow_headers=['*'],
 	)
 @app.get("/")
 async def read_root():
@@ -54,3 +56,5 @@ async def read_item(name: str):
 	    result.append({"id":key,"src":value})
 	return result
 
+if __name__ == '__main__':
+	uvicorn.run(app='index:app',host='0.0.0.0',port=80,reload=True)
